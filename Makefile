@@ -7,7 +7,7 @@ ARNAME = flp-log-xgazdi04
 all: $(FILE)
 
 $(FILE): $(FILE).pl
-		swipl -q -g start -o $(NAME) -c $(FILE).pl
+		swipl -q -g start --stack_limit=16g -o $(NAME) -c $(FILE).pl
 
 clean:
 		rm -f $(NAME) $(ARNAME).zip
