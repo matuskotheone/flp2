@@ -1,4 +1,4 @@
-FILE = veza
+FILE = flp23-log
 NAME = flp23-log
 ARNAME = flp-log-xgazdi04
 
@@ -7,10 +7,10 @@ ARNAME = flp-log-xgazdi04
 all: $(FILE)
 
 $(FILE): $(FILE).pl
-		swipl -q -g start --stack_limit=16g -o $(NAME) -c $(FILE).pl
+		swipl -q -g start -o $(NAME) -c $(FILE).pl
 
 clean:
 		rm -f $(NAME) $(ARNAME).zip
 
 zip:
-		zip $(ARNAME).zip $(FILE).pl README Makefile
+		zip $(ARNAME).zip $(FILE).pl README Makefile test1 test2 test3
